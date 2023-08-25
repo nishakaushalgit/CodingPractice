@@ -11,7 +11,7 @@ class A {
 		}
 		return true;
 	}
-//code
+
 	public static boolean isValidCC(Long num) {
 		String s = String.valueOf(num);
 		if (s.length() != 16) {
