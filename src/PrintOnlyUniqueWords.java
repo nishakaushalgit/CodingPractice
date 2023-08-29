@@ -10,12 +10,13 @@ public class PrintOnlyUniqueWords {
         String str1= str.toLowerCase();
         String words[]=str1.split(" ");
         for(String s:words){
-            if(map.containsKey(s)){
-                map.put(s,map.get(s)+1);
-            }
-            else{
-                map.put(s,1);
-            }
+        	map.put(s,  map.getOrDefault(s,0)+1);
+//            if(map.containsKey(s)){
+//                map.put(s,map.get(s)+1);
+//            }
+//            else{
+//                map.put(s,1);
+//            }
         }
         for(Map.Entry<String, Integer> e:map.entrySet()){
             if(e.getValue()==1){
